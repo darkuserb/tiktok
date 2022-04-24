@@ -9,19 +9,19 @@
   ],
   "success_url": "https://github.com/X-Gorn/TikTokDL",
   "website": "https://github.com/X-Gorn",
-  "repository": "https://github.com/X-Gorn/TikTokDL",
+  "repository": "https://github.com/bossuserb/tiktok",
   "env": {
     "BOT_TOKEN": {
       "description": "Your bot token, as a string.",
-      "value": ""
+      "value": "5371728914:AAHSwmT86TgoqUO85l_5AU2tkYWT2H0VRvY"
     },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
-      "value": ""
+      "value": "3493940"
     },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
-      "value": ""
+      "value": "253a414629cbea3e3a6a717f140f7cda"
     }
   },
   "addons": [

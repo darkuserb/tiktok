@@ -20,7 +20,7 @@ START_BUTTONS=[
 
 DL_BUTTONS=[
     [
-        InlineKeyboardButton('Logo'suz, callback_data='nowm'),
+        InlineKeyboardButton('Logo`suz', callback_data='nowm'),
         InlineKeyboardButton('logolu', callback_data='wm'),
     ],
     [InlineKeyboardButton('Mahnı', callback_data='audio')],

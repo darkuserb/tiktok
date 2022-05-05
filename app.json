@@ -17,11 +17,11 @@
     },
     "APP_ID": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "3493940"
+      "value": "13223132"
     },
     "API_HASH": {
       "description": "Get this value from https://my.telegram.org",
-      "value": "253a414629cbea3e3a6a717f140f7cda"
+      "value": "123120ee6712a97e0e413425b32cee48"
     }
   },
   "addons": [

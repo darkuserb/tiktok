@@ -1,3 +1,5 @@
 Pyrogram
 TgCrypto
 requests==2.26.0
+pymongo[srv]
+aiofiles

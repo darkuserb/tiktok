@@ -137,4 +137,3 @@ async def _callbacks(bot, cb: CallbackQuery):
     shutil.rmtree(dirs)
 
 Client.run()
-q

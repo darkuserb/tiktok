@@ -28,7 +28,7 @@ DL_BUTTONS=[
 
 
 # Running bot
-xbot = Client('TikTokDL', api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+Client = Client('TikTokDL', api_id=APP_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 
 
 # Helpers
@@ -47,12 +47,12 @@ async def run_cmd(cmd: str) -> Tuple[str, str, int, int]:
   )
 
 # Start
-@xbot.on_message(filters.command('start') & filters.private)
+@Client.on_message(filters.command('start') & filters.private)
 async def _start(bot, update):
   await update.reply_text(f"Mən Hüsnünün botu!\nSən bu botla tiktok mahnısı və videosu endirə bilərsən", True, reply_markup=InlineKeyboardMarkup(START_BUTTONS))
 
 # Downloader for tiktok
-@xbot.on_message(filters.regex(pattern='.*http.*') & filters.private)
+@Client.on_message(filters.regex(pattern='.*http.*') & filters.private)
 async def _tiktok(bot, update):
   url = update.text
   session = requests.Session()
@@ -62,7 +62,7 @@ async def _tiktok(bot, update):
   await update.reply('Seçiminizi edin', True, reply_markup=InlineKeyboardMarkup(DL_BUTTONS))
 
 # Callbacks
-@xbot.on_callback_query()
+@Client.on_callback_query()
 async def _callbacks(bot, cb: CallbackQuery):
   if cb.data == 'nowm':
     dirs = downloads.format(uuid.uuid4().hex)
@@ -136,5 +136,5 @@ async def _callbacks(bot, cb: CallbackQuery):
     await bot.send_audio(update.chat.id, f'{ttid}.mp3',)
     shutil.rmtree(dirs)
 
-xbot.run()
+Client.run()
 q
